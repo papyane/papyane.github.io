@@ -1,12 +1,12 @@
-- name: Home
-  link: /
+# - name: Home
+#  link: /
 
-- name: Resume
-  link: /resume/
+# - name: Resume
+#  link: /resume/
 
-- name: Projects
-  link: /projects/
+# - name: Projects
+#  link: /projects/
 
-- name: Personal
-  link: /personal/
+#- name: Personal
+#  link: /personal/
 
