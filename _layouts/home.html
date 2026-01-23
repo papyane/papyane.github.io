@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ site.title }}</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+    }
+
+    .hero {
+      height: 100vh;
+      background-image: url('/assets/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .content {
+      position: relative;
+      padding: 4rem;
+      max-width: 700px;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero">
+    <div class="overlay"></div>
+
+    <div class="content">
+      {{ content }}
+    </div>
+  </div>
+</body>
+</html>
