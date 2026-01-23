@@ -1,1 +1,17 @@
+<!-- rendering navigation -->
+<nav>
+  {% for item in site.data.navigation %}
+    <a href="{{ item.link }}">{{ item.name }}</a>
+  {% endfor %}
+</nav>
 
+<!-- adding basic style just to start -->
+<style>
+nav {
+  margin-bottom: 2rem;
+}
+nav a {
+  margin-right: 1.5rem;
+  text-decoration: none;
+}
+</style>
