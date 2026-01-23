@@ -2,6 +2,6 @@
 layout: default
 ---
 
-# {{ site.title }}
+{{ site.title }}
 
 Welcome! I’m a student interested in tbd.
