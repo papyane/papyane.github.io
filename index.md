@@ -1,6 +1,5 @@
 ---
 layout: home
-permalink: /resume/
 ---
 
 Welcome! I’m a student interested in tbd.
