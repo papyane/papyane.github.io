@@ -1,7 +1,10 @@
 ---
-layout: home
+layout: default
+title: Home
 ---
 
-Welcome! I’m a student interested in tbd.
+# Your Name
 
-[Resume](/assets/resume.pdf)
+**Student at UC Berkeley**
+
+I like something and doing something.
