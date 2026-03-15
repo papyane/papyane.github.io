@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Your Name
+# Elen Papyan
 
 **Student at UC Berkeley**
 
