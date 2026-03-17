@@ -6,3 +6,4 @@ permalink: /something/
 
 # Something Log
 
+Something I like?
