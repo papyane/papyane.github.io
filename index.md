@@ -9,4 +9,4 @@ title: Home
 
 I like something and doing something.
 
-![Corot's Ville-d'Avray](/assets/images/Corot_villedavray.jpg.jpg)
+![Corot's Ville-d'Avray](/assets/images/Corot_villedavray.jpg)
