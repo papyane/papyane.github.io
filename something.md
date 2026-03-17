@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Something
-permalink: /Something/
+permalink: /something/
 ---
 
 # Something Log
