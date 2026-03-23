@@ -31,6 +31,44 @@
             </div>
         </div>
     </main>
-    
+
+    <script>
+        // Pull the location data from Jekyll into JavaScript
+        const locations = [
+            {% for item in site.data.gallery %}
+                "{{ item.location }}"{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ];
+        
+        const items = document.querySelectorAll('.gallery-item');
+        const locationElement = document.getElementById('image-location');
+        const counterElement = document.getElementById('counter');
+        let currentIndex = 0;
+
+        function updateGallery(newIndex) {
+            // Remove active class from current image
+            items[currentIndex].classList.remove('active');
+            
+            // Update index with wrapping (so going past the end loops to the start)
+            currentIndex = newIndex;
+            if (currentIndex >= items.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = items.length - 1;
+            
+            // Add active class to new image
+            items[currentIndex].classList.add('active');
+            
+            // Update text
+            locationElement.innerText = "Image: " + locations[currentIndex];
+            counterElement.innerText = (currentIndex + 1) + " / " + items.length;
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            updateGallery(currentIndex + 1);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            updateGallery(currentIndex - 1);
+        });
+    </script>
 </body>
 </html>
