@@ -1,48 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title> Elen Papyan </title>
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-    }
-
-    .hero {
-      height: 100vh;
-      background-image: url('/assets/hero.jpg');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      color: white;
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.4);
-    }
-
-    .content {
-      position: relative;
-      padding: 4rem;
-      max-width: 700px;
-    }
-
-    a {
-      color: white;
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/minimal-gallery.css' | relative_url }}">
 </head>
-
 <body>
-  <div class="hero">
-    <div class="overlay"></div>
 
-    <div class="content">
-      {{ content }}
-    </div>
-  </div>
+    <main class="content">
+        <div class="intro-text">
+            <h1>Elen Papyan</h1> <p class="title">CS and Math Student at UC Berkeley</p>
+            <p>I like something.</p>
+            <a href="/assets/resume.pdf" class="resume-link" target="_blank">[Resume]</a>
+        </div>
+
+        <div class="gallery-container">
+            {% for item in site.data.gallery %}
+                <div class="gallery-item {% if forloop.first %}active{% endif %}" style="background-image: url('{{ item.image | relative_url }}');">
+                </div>
+            {% endfor %}
+
+            <div class="gallery-controls">
+                <p id="image-location" class="location-text">Image: {{ site.data.gallery[0].location }}</p>
+                <div class="navigation-arrows">
+                    <span id="prev" class="arrow prev-arrow"><</span>
+                    <span id="counter" class="counter-text">1 / {{ site.data.gallery | size }}</span>
+                    <span id="next" class="arrow next-arrow">></span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
 </body>
 </html>
