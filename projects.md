@@ -4,8 +4,6 @@ title: Projects
 permalink: /projects/
 ---
 
-# Projects
-
 <div class="projects-container">
   <h1 class="page-title">Projects</h1>
 
