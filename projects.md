@@ -6,12 +6,6 @@ permalink: /projects/
 
 # Projects
 
----
-layout: default
-title: Projects
-permalink: /projects/
----
-
 <div class="projects-container">
   <h1 class="page-title">Projects</h1>
 
